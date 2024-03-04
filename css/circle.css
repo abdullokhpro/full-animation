@@ -1,0 +1,46 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(206, 15, 161);
+    border-radius: 50%;
+    position: relative;
+
+    animation: circle 3s linear 0s infinite normal forwards;
+}
+
+@keyframes circle {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        left: 200px;
+        top: 0;
+    }
+
+    40% {
+        left: 200px;
+        top: 200px;
+    }
+
+    55% {
+        left: 500px;
+        top: 200px;
+    }
+
+    75% {
+        left: 500px;
+        top: 500px;
+    }
+
+    85% {
+        left: 600px;
+        top: 500px;
+    }
+
+    100% {
+        left: 100%;
+        top: 500px;
+    }
+}

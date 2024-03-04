@@ -1,0 +1,59 @@
+@import url(./fonts.css);
+@import url(./variables.css);
+@import url(./reset.css);
+@import url(./reset.css);
+@import url(./header.css);
+
+.header__link {
+    background-color: rgb(0, 146, 237);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stair__card {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    width: 300px;
+    height: 500px;
+    margin-top: 100px;
+    border-radius: 150px 150px 0 0;
+    background-color: rgb(0, 146, 237);
+    overflow: hidden;
+}
+
+.stair__card__element {
+    width: 80%;
+    height: 50px;
+    transform: translateX(100%);
+    background-color: rgb(34, 32, 32);
+    animation-name: fromRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.stair__card__element:nth-child(1){
+    width: 20%;
+}
+
+.stair__card__element:nth-child(2) {
+    width: 40%;
+}
+
+.stair__card__element:nth-child(3) {
+    width: 60%;
+}
+
+@keyframes fromRight {
+    to {
+        transform: translateX(0%);
+    }
+}

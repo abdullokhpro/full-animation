@@ -1,0 +1,121 @@
+@import url(./fonts.css);
+@import url(./variables.css);
+@import url(./reset.css);
+@import url(./reset.css);
+@import url(./header.css);
+
+
+body {
+    background-color: #d0503a;
+}
+
+#gift {
+    height: 100vh;
+}
+
+.header__link {
+    background-color: rgb(39, 34, 34);
+}
+
+.gift__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.gift__top {
+    display: flex;
+    gap: -5px;
+    padding-bottom: 80px;
+    margin-right: 20px;
+    transform: translateY(-100px);
+    transform: rotate(0deg);
+    transform-origin: center center;
+    animation-duration: 3s;
+    animation-name: fromTop;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-delay: .6s;
+}
+
+.gift__top__left {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 20px solid #fff;
+    border-radius: 50% 50% 0px 50%;
+    animation-name: brandColor;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-delay: .5s;
+}
+
+.gift__top__right {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 20px solid #fff;
+    border-radius: 50% 50% 50% 0%;
+    animation-name: brandColor;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-delay: .5s;
+}
+
+.gift__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    animation-name: stickTo;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-delay: .5s;
+}
+
+.gift__bottom__part {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    animation-name: partColor;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-delay: .5s;
+    transform: rotate(45deg);
+}
+
+@keyframes fromTop {
+    to {
+        transform: translateY(0);
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes stickTo {
+    to {
+        gap: 20px;
+    }
+}
+
+@keyframes partColor {
+    to {
+        transform: rotate(0);
+    }
+}
